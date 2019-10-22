@@ -317,15 +317,23 @@ public class Ui {
 
     /**
      * It confirms with user on the deletion of a task.
+     * It alerts user that the deletion will cause the current patient who assigned
+     * to this task will no longer assigned to this task.
      * If user confirms, key in 'Y'. Otherwise key in 'N'.
      *
-     * @param task it contains task's info
+     * @param task contains task's info
+     * @param assignedToAnyPatient indicates whether the task is assigned to any patient
      * @return true if user confirmed the deletion. False otherwise.
      */
-    public boolean confirmTaskToBeDeleted(Task task) {
+    public boolean confirmTaskToBeDeleted(Task task, boolean assignedToAnyPatient) {
         showTaskInfo(task);
         while (true) {
-            System.out.println("The task is to be deleted. Are you sure (Y/N)? ");
+            if (assignedToAnyPatient) {
+                System.out.println("The task is to be deleted. These patients will no "
+                        + "longer assigned to this task. Are you sure (Y/N)?");
+            } else {
+                System.out.println("The task is to be deleted. Are you sure (Y/N)? ");
+            }
             String command = readCommand();
             if (command.toLowerCase().equals("y")) {
                 return true;
@@ -426,6 +434,24 @@ public class Ui {
         for (int i = 0; i < patientTask.size(); i++) {
             showLine();
             System.out.println(tasks.get(i).getID() + ". " + tasks.get(i).getDescription() + "\n");
+            System.out.println(patientTask.get(i).toString());
+            showLine();
+        }
+    }
+
+    /**
+     * It shows all info of patientTasks found which are associated with the task given by user.
+     *
+     * @param task        task given by user
+     * @param patientTask list of patienttasks being found associated with the patient
+     * @param patients    list of patients relate to patienttasks found
+     */
+    public void taskPatientFound(Task task, ArrayList<PatientTask> patientTask, ArrayList<Patient> patients) {
+        System.out.println("These patients are assigned to the task " + task.getID()
+                + " " + task.getDescription() + " are found : \n");
+        for (int i = 0; i < patientTask.size(); i++) {
+            showLine();
+            System.out.println(patients.get(i).getID() + ". " + patients.get(i).getName() + "\n");
             System.out.println(patientTask.get(i).toString());
             showLine();
         }

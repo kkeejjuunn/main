@@ -204,16 +204,17 @@ public class Ui {
         }
     }
 
+    //@@kkeejjuunn
     /**
      * It asks user to choose a task to be deleted from a list of tasks.
      *
      * @param numberOfTasks the number of task contain in the list
-     * @return the number being choosen by user. If return -1, it means user canceled the deletion
+     * @return the index being chosen by user. If return -1, it means user canceled the deletion
      */
     public int chooseTaskToDelete(int numberOfTasks) {
         int chosenNumber = -1;
         while (true) {
-            System.out.println("Enter the number of task to delete, or enter number 0 to cancel: ");
+            System.out.println("Enter the index of task to delete, or enter number 0 to cancel: ");
             String command = readCommand();
             try {
                 chosenNumber = Integer.parseInt(command);
@@ -263,8 +264,9 @@ public class Ui {
         System.out.println("Got it. The patient is deleted.");
     }
 
+    //@@kkeejjuunn
     /**
-     * It shows message of a task being deleted.
+     * It shows message of a task being deleted successfully.
      */
     public void taskDeleted() {
         System.out.println("Got it. The task is deleted.");
@@ -326,7 +328,6 @@ public class Ui {
      * @return true if user confirmed the deletion. False otherwise.
      */
     public boolean confirmTaskToBeDeleted(Task task, boolean assignedToAnyPatient) {
-        showTaskInfo(task);
         while (true) {
             if (assignedToAnyPatient) {
                 System.out.println("The task is to be deleted. These patients will no "

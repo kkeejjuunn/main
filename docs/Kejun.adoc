@@ -1,0 +1,69 @@
+= Kejun Liu - Project Portfolio
+:site-section: AboutUs
+:imagesDir: ../images
+:stylesDir: ../stylesheets
+
+== PROJECT: Dukepital - Level 3
+
+---
+
+== Overview
+
+Dukepital - Level 3 is intended for nurses who wish to keep their workload organized and monitored through an easy-to-access application. When handling many tasks serving a wide variety of patients, Dukepital is valuable in providing support in tracking tasks specific to each of the patients a nurse may be caring for. It is best optimized through the CLI (Command Line Interface), though users have the benefit of access to a GUI (Graphical User Interface) as well, if they prefer it.
+
+== Summary of contributions
+
+* *Major enhancement*: added *the various CRUD commands of patient and task*
+** What it does: allows the user to read/write the details of patient and task into Dukepital by providing following commands:
+*** `AddPatientCommand`: user is able to create a new patient.
+*** `DeletePatientCommand`: user is able to delete an existing patient.
+*** `FindPatientCommand`: user is able to find a patient by proving patient id or patient name.
+*** `ListPatientsCommand`: user is able to list all the patients.
+*** `UpdatePatientCommand`: user is able to update the details of an existing patient.
+*** `AddTaskCommand`: user is able to create a new task.
+*** `DeleteTaskCommand`: user is able to delete an existing task.
+*** `FindTaskCommand`: user is able to find a task by proving task id or task description.
+*** `ListTasksCommand`: user is able to list all the tasks.
+*** `UpdateTaskCommand`: user is able to update the details of an existing task.
+** Justification: This feature allows user to manage patients and tasks so that they can be benefit from Dukepital's more advanced features.
+** Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives.
+
+* *Minor enhancement*: added *a logger*
+** What it does: logs all the exceptions into an exception.log file.
+** Justification: This feature allows the developer to track the information of all the exception thrown.
+** Highlights: This enhancement affects existing exception thrown and exceptions to be thrown in future. It required an in-depth analysis of the configuration of log file.
+** Credits: http://logging.apache.org/log4j/2.x/download.html[Download Log4j library] http://logging.apache.org/log4j/2.x/maven-artifacts.html[Use Log4j in Gradle build] https://www.youtube.com/watch?v=rbuR9Q_55h4[Tutorial to add Log4j in java project]
+
+* *Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]] _{give links to collated code files}_
+
+* *Other contributions*:
+
+** Project management:
+*** Managed README.adoc
+** Enhancements to existing features:
+*** allow user to find a patient by providing partial name instead of the whole name (Pull request https://github.com/AY1920S1-CS2113-T13-2/main/pull/182[#182])
+*** notification of tasks assigned to the patient while deleting a patient (abandoned features due to incompatible implementation of GUI) (Pull requests https://github.com/AY1920S1-CS2113-T13-2/main/pull/146[#146])
+*** notification of task assigned to patient(s) while deleting a task (abandoned features due to incompatible implementation of GUI) (Pull requests https://github.com/AY1920S1-CS2113-T13-2/main/pull/169[#169])
+
+** Community:
+*** PRs reviewed (with non-trivial review comments): https://github.com/AY1920S1-CS2113-T13-2/main/pull/145[#145], https://github.com/AY1920S1-CS2113-T13-2/main/pull/149[#149]
+** Tools:
+*** Integrated a third party library (Log4j) to the project (https://github.com[#42])
+
+
+== Contributions to the User Guide
+
+
+|===
+|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._
+|===
+
+
+
+== Contributions to the Developer Guide
+
+|===
+|_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._
+|===
+
+

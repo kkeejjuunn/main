@@ -9,7 +9,7 @@
 
 == Overview
 
-Dukepital - Level 3 is intended for nurses who wish to keep their workload organized and monitored through an easy-to-access application. When handling many tasks serving a wide variety of patients, Dukepital is valuable in providing support in tracking tasks specific to each of the patients a nurse may be caring for. It is best optimized through the CLI (Command Line Interface), though users have the benefit of access to a GUI (Graphical User Interface) as well, if they prefer it.
+Dukepital - Level 3 rppdda
 
 == Summary of contributions
 
@@ -42,8 +42,8 @@ Dukepital - Level 3 is intended for nurses who wish to keep their workload organ
 *** Managed README.adoc
 ** Enhancements to existing features:
 *** allow user to find a patient by providing partial name instead of the whole name (Pull request https://github.com/AY1920S1-CS2113-T13-2/main/pull/182[#182])
-*** notification of tasks assigned to the patient while deleting a patient (abandoned features due to incompatible implementation of GUI) (Pull requests https://github.com/AY1920S1-CS2113-T13-2/main/pull/146[#146])
-*** notification of task assigned to patient(s) while deleting a task (abandoned features due to incompatible implementation of GUI) (Pull requests https://github.com/AY1920S1-CS2113-T13-2/main/pull/169[#169])
+*** notification of tasks assigned to the patient while deleting a patient (abandoned features due to incompatible implementation of GUI) (Pull requests t[#146])
+*** notification of task assigned to patient(s) while deleting a task (abandoned features due to incompatible implementation of GUI) (Pull requests r[#169])
 
 ** Community:
 *** PRs reviewed (with non-trivial review comments): https://github.com/AY1920S1-CS2113-T13-2/main/pull/145[#145], https://github.com/AY1920S1-CS2113-T13-2/main/pull/149[#149]
